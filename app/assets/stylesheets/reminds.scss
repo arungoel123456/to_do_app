@@ -1,0 +1,58 @@
+// Place all the styles related to the Reminds controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.headers-of-index{
+	text-align: center;
+    text-decoration: underline;
+    color: blue;
+}
+
+.remind-list-box{
+	border: 1px dashed black;
+    border-top-left-radius: 25%;
+    border-bottom-left-radius: 25%;
+    border-top-right-radius: 25%;
+    border-bottom-right-radius: 25%;
+    margin-left: 565px;
+    margin-right: 565px;
+    height: 208px;
+    width: 634px;
+    text-align: center;
+    
+    background-color: dodgerblue;
+    color: white;
+}
+
+
+
+ul{
+	list-style: none;
+}
+a:link {
+    color: white;
+}
+
+
+a:visited {
+    color: white;
+}
+
+
+a:hover {
+    color: white;
+}
+
+
+a:active {
+    color: white;
+}
+
+#new-remind a{
+    color:blue;
+}
+
+.show-edit{
+    color: blue;
+}

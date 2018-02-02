@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ToDoApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<header id="body-header">
+		<div id="links">
+			<ul>
+				<% if !user_signed_in? %>
+					<% if !current_page?(new_user_session_path) %>
+					<li>
+						<p>
+							<button><%= link_to "Sign In", new_user_session_path %></button>
+						</p>
+					</li>
+					<% end %>
+					<% if !current_page?(new_user_registration_path) %>
+					<li>
+						<p>
+							<button><%= link_to "Sign Up", new_user_registration_path %></button>
+						</p>
+					</li>
+					<% end %>
+				<% else %>
+				
+				<li>
+					<p><%= current_user.email %></p>
+				</li>
+				<li>
+					<p><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></p>
+				</li>
+				<% end %>
+				
+			</ul>
+			
+		</div>
+
+		<div id="page-logo" >
+			<%= link_to "/" do%>
+				<%= image_tag("top-logo-reminder.jpg")%>
+			<% end %>
+		</div>
+
+	</header>
+
+
+
+
+<%= yield %>
+
+</body>
+</html>

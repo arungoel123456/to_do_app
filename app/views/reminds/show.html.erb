@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Task:</strong>
+  <%= @remind.task %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @remind.status %>
+</p>
+
+<span class="show-edit"><%= link_to 'Edit', edit_remind_path(@remind) %> </span>|
+<span class="show-edit"><%= link_to 'Back', reminds_path %></span>
